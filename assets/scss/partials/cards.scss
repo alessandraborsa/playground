@@ -25,6 +25,8 @@
         }
         &-text {
             padding: rem(30px);
+            text-align: center;
+            font-family: $gotham-book;
         }
         &-cta {
             background-color: $black;

@@ -37,6 +37,7 @@
             @include respond-above(s) {
                 word-spacing: 9999px;
                 font-size: rem(70px);
+                line-height: 1;
             }
             .image-right & {
                 @include respond-above(s) {
