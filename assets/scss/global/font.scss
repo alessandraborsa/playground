@@ -1,0 +1,15 @@
+$fontsFolder: "/assets/fonts/";
+
+@include font-face('Gotham Bold', $fontsFolder + '/Gotham-Bold', otf);
+@include font-face('Gotham Book', $fontsFolder + '/Gotham-Book', otf);
+@include font-face('Gotham Medium', $fontsFolder + '/Gotham-Medium', otf);
+
+
+$gotham-bold: 'Gotham Bold', Arial;
+$gotham-book: 'Gotham Book', Arial;
+$gotham-medium: 'Gotham Medium', Arial;
+
+@mixin heading-1 {
+  font-family: $gotham-bold;
+  font-size: rem(80px);
+}

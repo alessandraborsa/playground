@@ -1,0 +1,56 @@
+.footer {
+    background-color: $black;
+    color: $white;
+    border-top: 1px solid $grey;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: rem(80px) rem(50px);
+    &-logo {
+        display: flex;
+        justify-content: center;
+    }
+    &-links {
+        margin-top: rem(60px);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: rem(25px);
+        @include respond-above(s) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &-element {
+        font-size: rem(14px);
+        color: $grey;
+        text-align: center;
+        transition: all .2s ease-in;
+        &:hover {
+            color: $white;
+        }
+        @include respond-above(s) {
+            margin-right: rem(50px);
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: rem(15px);
+        margin-top: rem(40px);
+        a {
+            &:hover {
+                i {
+                    color: $grey;
+                }
+            }
+        }
+        i {
+            transition: all .2s ease-in;
+            color: $grey-social;
+        }
+    }
+}

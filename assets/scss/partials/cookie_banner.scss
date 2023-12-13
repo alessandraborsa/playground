@@ -1,0 +1,30 @@
+.cookie-banner {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    padding: rem(15px) rem(20px);
+    z-index: 3;
+    &.hidden {
+        display: none;
+    }
+    &-text {
+        font-size: rem(10px);
+    }
+    &-button {
+        background-color: $black;
+        color: $white;
+        font-size: rem(10px);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-left: rem(20px);
+        border: none;
+        height: rem(25px);
+        padding: 0 rem(30px);
+        cursor: pointer;
+    }
+}

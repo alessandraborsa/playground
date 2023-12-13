@@ -1,0 +1,98 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    @include respond-above(s) {
+        flex-direction: row;
+    }
+    &-image {
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        @include respond-above(s) {
+            width: 57%;
+        }
+    }
+    &-content {
+        background-color: $black;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: rem(50px) rem(20px);
+        .image-right & {
+            @include respond-above(s) {
+                align-items: flex-end;
+            }
+        }
+        @include respond-above(s) {
+            width: 43%;
+            padding: rem(80px);
+        }
+        .white-bg & {
+            background-color: $white;
+            color: $black;
+        }
+        &-title {
+            font-size: rem(50px);
+            font-family: $gotham-bold;
+            @include respond-above(s) {
+                word-spacing: 9999px;
+                font-size: rem(70px);
+            }
+            .image-right & {
+                @include respond-above(s) {
+                    text-align: right;
+                }
+            }
+        }
+        &-text {
+            font-size: rem(14px);
+            font-family: $gotham-book;
+            margin-top: rem(30px);
+            line-height: 1.6;
+            .image-right & {
+                @include respond-above(s) {
+                    text-align: right;
+                }
+            }
+            @include respond-above(s) {
+                width: 60%;
+            }
+        }
+        &-cta {
+            height: rem(50px);
+            text-transform: uppercase;
+            font-size: rem(14px);
+            font-family: $gotham-book;
+            letter-spacing: 2px;
+            border: 1px solid $white;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            padding: rem(10px);
+            margin-top: rem(40px);
+            transition: all .2s ease-in;
+            line-height: 1;
+            .white-bg & {
+                border: 1px solid $black;
+                &:hover {
+                    background-color: $black;
+                    color: $white;
+                    border-color: $black;
+                }
+            }
+            &:hover {
+                background-color: $white;
+                color: $black;
+                border-color: $white;
+            }
+            i {
+                margin-left: rem(5px);
+            }
+        }
+    }
+    &.image-right {
+        @include respond-above(s) {
+            flex-direction: row-reverse;
+        }
+    }
+}

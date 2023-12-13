@@ -1,0 +1,97 @@
+.form {
+    display: flex;
+    background-color: $black;
+    color: $white;
+    flex-direction: column;
+    padding: rem(70px) rem(20px);
+    @include respond-above(s) {
+        padding: rem(100px) rem(100px);
+    }
+    @include respond-above(m) {
+        padding: rem(100px) rem(200px);
+        flex-direction: row;
+    }
+    @include respond-above(xxm) {
+        padding: rem(100px) rem(270px);
+    }
+    &-text {
+        padding-right: rem(100px);
+        @include respond-above(m) {
+            width: 43%;
+        }
+        &-title {
+            font-size: rem(50px);
+            font-family: $gotham-bold;
+            @include respond-above(m) {
+                font-size: rem(70px);
+            }
+        }
+        &-content {
+            font-size: rem(14px);
+            font-family: $gotham-book;
+            color: $grey;
+            line-height: 1.8;
+            margin-top: rem(20px);
+        }
+    }
+    &-module {
+        margin-top: rem(70px);
+        @include respond-above(m) {
+            margin-top: 0;
+            width: 57%;
+        }
+        &-inputs {
+            display: grid;
+            column-gap: rem(25px);
+            row-gap: rem(20px);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            .form-input {
+                min-height: rem(30px);
+                &.fullWidth {
+                    grid-column: span 2;
+                }
+                &-field {
+                    width: 100%;
+                    height: 100%;
+                    background-color: $black;
+                    border: 1px solid $grey;
+                    color: $white;
+                    padding: rem(5px);
+                    &::placeholder {
+                        color: $grey;
+                        opacity: .5;
+                    }
+                }
+            }
+            textarea {
+                padding: rem(5px);
+                min-height: rem(150px);
+                resize: none;
+            }
+        }
+        &-button {
+            background-color: $white;
+            color: $black;
+            cursor: pointer;
+            margin-top: rem(20px);
+            height: rem(40px);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 rem(30px);
+            text-transform: uppercase;
+            font-size: rem(14px);
+            letter-spacing: 2px;
+            transition: all .2s ease-in;
+            border: 1px solid $white;
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+            i {
+                margin-left: rem(5px);
+            }
+        }
+    }
+}

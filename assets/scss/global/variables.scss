@@ -1,0 +1,39 @@
+//colors
+
+$grey-bg: #ebebeb;
+$white: #FFFFFF;
+$black: #000000;
+$grey: #cccccc;
+$grey-dark: #666666;
+$grey-social: #4d4d4d;
+
+//breakpoints
+$breakpoints: (
+  xxs_minus: 374px,
+  xxs: 375px,
+  xxs_plus: 376px,
+  xs_minus: 479px,
+  xs: 480px,
+  xs_plus: 481px,
+  s_minus: 767px,
+  s: 768px,
+  s_plus: 769px,
+  sm_minus: 991px,
+  sm: 992px,
+  sm_plus: 993px,
+  m_minus: 1023px,
+  m: 1024px,
+  xxm_minus: 1199px,
+  xxm: 1200px,
+  xxm_plus: 1201px,
+  m_plus: 1025px,
+  l_minus: 1279px,
+  l: 1280px,
+  l_plus: 1281px,
+  xl_minus: 1439px,
+  xl: 1440px,
+  xl_plus: 1441px,
+  xxl_minus: 1599px,
+  xxl: 1600px,
+  xxl_plus: 1601px
+);
